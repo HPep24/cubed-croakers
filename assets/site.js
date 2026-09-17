@@ -10,7 +10,7 @@ const CONFIG={
   EDITIONS_URL:'https://acme.pics/dex/nft/editions/CROAKER',
   X_URL:'https://x.com/CubedCroakers',
   ARTIST_X:'https://x.com/HnftPepe',
-  SITE_URL:'https://hpep24.github.io/cubed-croakers'                              // set to your domain (e.g. https://cubedcroakers.art) so shares link back here
+  SITE_URL:'https://cubedcroakers.ar.io'      // canonical address — shares and deep links point here (GitHub Pages is a mirror)
 };
 const $=(s,r=document)=>r.querySelector(s);const $$=(s,r=document)=>[...r.querySelectorAll(s)];
 const pad4=n=>String(n).padStart(4,'0');

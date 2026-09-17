@@ -28,7 +28,8 @@ CONFIG (top of assets/site.js)
   KNOWN_MINTED  10    → fallback floor if the ACME indexer can't be reached from the visitor's browser:
                        editions below this number are still revealed (marked "mint status unverified").
                        Bump it now and then, or leave it — when ACME answers, it isn't used.
-  SITE_URL      ''    → set to the final domain (https://…) so "Share on X" links back to the finder with ?e=NNNN.
+  SITE_URL      https://cubedcroakers.ar.io → the canonical address; "Share on X" and deep links point here.
+                       (index.html carries the matching <link rel="canonical">, og:url and absolute og:image.)
 
 MINT VERIFICATION
   The finder calls https://acme.pics/api/assets/CROAKER.NNNN (404 = not minted). That request works only if the
@@ -38,6 +39,14 @@ MINT VERIFICATION
 
 DEEP LINKS
   index.html?e=0330  opens the page and reveals CROAKER.0330 (if minted).
+
+PUBLISHING (one paste in Terminal — see publish_to_github.sh one folder up)
+  bash "$HOME/Desktop/Recursive Pepe Project/CUBED CROAKERS marketing/V3/publish_to_github.sh"
+  → pushes this folder to github.com/HPep24/cubed-croakers (GitHub Pages mirror: https://hpep24.github.io/cubed-croakers/)
+  → uploads changed files to Arweave with @ar.io/deploy and points the ArNS name "cubedcroakers" at the new version
+    (canonical: https://cubedcroakers.ar.io/ — updates show within the 300 s TTL).
+  Needs once: Node.js, a few dollars of Turbo credits on the Solana wallet that owns the name (console.ar.io),
+  and that wallet's private key saved by the script to ~/.config/cubedcroakers/solana.key (chmod 600, local only).
 
 HERO LINE
   Built with "Forever trapped in the Bitcoin blockchain." Alternates, if you want to swap (index.html, .trapped):
