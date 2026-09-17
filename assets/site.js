@@ -6,7 +6,7 @@ const CONFIG={
   API:'https://acme.pics/api/assets/',    // ACME indexer
   KNOWN_MINTED:10,                        // fallback floor if the indexer can't be reached from the browser (editions .0000–.0009 existed at build time)
   ASSET_URL:'https://acme.pics/asset/',
-  MINT_URL:'https://acme.pics/asset/CROAKER',
+  MINT_URL:'https://acme.pics/dex/nft/editions/CROAKER',   // the mint page (editions) — one click to mint
   EDITIONS_URL:'https://acme.pics/dex/nft/editions/CROAKER',
   X_URL:'https://x.com/CubedCroakers',
   ARTIST_X:'https://x.com/HnftPepe',
